@@ -1,0 +1,48 @@
+# Swagger Documentation
+
+Start the server locally and open:
+   - URL: (http://localhost:3000/api-docs/)
+
+### API Endpoints
+To get the total amount for our food
+- Method: GET
+- Path: /getAllDetails
+## Parameters
+- sector (string) required
+- org_id (integer) required
+- total_distance (integer) required
+- item_type (string) required
+#### Response
+- Status: 200 OK
+- Body: Total Amount for the delivery will be displayed.
+
+Example:
+1. {
+    "sector": "residential",
+    "org_id": 1,
+    "total_distance": 22,
+    "item_type": "perishable"
+}
+output:
+{
+    "Amount": 35.5
+}
+
+2. {
+    "sector": "Industrial",
+    "org_id": 4,
+    "total_distance": 82,
+    "item_type": "non-perishable"
+}
+output:
+{
+    "Amount": 87
+}
+
+To get all the details
+- Method: GET
+- Path: /getAllDetails
+## Response
+- Status: 200 OK
+- Body: JSON array containing all the details.
+
