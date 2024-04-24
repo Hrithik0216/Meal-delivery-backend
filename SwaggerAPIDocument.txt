@@ -1,12 +1,12 @@
 # Swagger Documentation
 
 Start the server locally and open:
-   - URL: (http://localhost:3000/api-docs/)
+   - URL: (https://meal-delivery-backend.onrender.com/api-docs)
 
 ### API Endpoints
-To get the total amount for our food
-- Method: GET
-- Path: /getAllDetails
+To get the total amount for the food
+- Method: POST
+- Path: /mealdeliveryapp/calculate-cost
 ## Parameters
 - sector (string) required
 - org_id (integer) required
@@ -41,7 +41,57 @@ output:
 
 To get all the details
 - Method: GET
-- Path: /getAllDetails
+- Path: /mealdeliveryapp
+## Response
+- Status: 200 OK
+- Body: JSON array containing all the details.
+
+
+
+If Swagger (- URL: (https://meal-delivery-backend.onrender.com/api-docs)) isn't functioning , try
+
+Start the server in postman:
+   - URL: (https://meal-delivery-backend.onrender.com)
+
+### API Endpoints
+To get the total amount for the food
+- Method: POST
+- Path: https://meal-delivery-backend.onrender.com/calculateCost
+## Parameters
+- sector (string) required
+- org_id (integer) required
+- total_distance (integer) required
+- item_type (string) required
+#### Response
+- Status: 200 OK
+- Body: Total Amount for the delivery will be displayed.
+
+Example:
+1. {
+    "sector": "residential",
+    "org_id": 1,
+    "total_distance": 22,
+    "item_type": "perishable"
+}
+output:
+{
+    "Amount": 35.5
+}
+
+2. {
+    "sector": "Industrial",
+    "org_id": 4,
+    "total_distance": 90,
+    "item_type": "perishable"
+}
+output:
+{
+    "Amount": 137.5
+}
+
+To get all the details
+- Method: GET
+- Path: https://meal-delivery-backend.onrender.com/getAllDetails
 ## Response
 - Status: 200 OK
 - Body: JSON array containing all the details.
