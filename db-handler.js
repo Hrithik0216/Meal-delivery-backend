@@ -1,5 +1,4 @@
-postgres://meal_delivery_backend_user:3g9SCHbKkYFqTxVvw0rXuKnuoCDyS9v9@dpg-
-cokblln79t8c73c6pv0g-a.oregon-postgres.render.com
+postgres://meal_delivery_backend_jnps_user:iJt0UftoZZrHaMQMmjhtksch5flqYfxr@dpg-
+cokcsjed3nmc7398l9d0-a.oregon-postgres.render.com
 /
-
-meal_delivery_backend
+meal_delivery_backend_jnps

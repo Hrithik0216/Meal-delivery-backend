@@ -4,7 +4,7 @@ const { getAllDetails, calculatePrice } = require('../Controller/controller');
 
 /**
  * @swagger
- * /api/v1/fooddeliveryapp/:
+ * /mealdeliveryapp/:
  *  get:
  *      description: Get all prices
  *      responses: 
@@ -15,23 +15,20 @@ router.get('/getAllDetails', getAllDetails);
 
 /**
  * @swagger
- * /api/v1/fooddeliveryapp/calculate-cost:
+ * /mealdeliveryapp/calculate-cost:
  *   post:
- *     summary: Calculate delivery cost
- *     description: Calculate the total delivery cost based on various factors such as zone, organization, distance, and item type.
+ *     summary: Calculation of delivery cost
+ *     description: Calculate the total delivery cost based on various factors such as sector, org_id, total_distance, and item_type.
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/DeliveryRequest'
+ *           
  *     responses:
  *       200:
  *         description: Successful response with the total delivery cost
  *         content:
  *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/DeliveryResponse'
  */
 router.post('/calculateCost', calculatePrice);
 
